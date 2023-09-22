@@ -105,6 +105,23 @@ h1, h2, h3, h4, h5, h6, p, a {
     align-items: center;
 }
 
+.translate-button {
+    width: 150px;
+    height: 43px;
+    border-radius: 4px;
+    background: #C6100F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    text-align: center;
+    font-size: 14px;
+    line-height: 19.6px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
 .shopping-cart {
     display: flex;
     justify-content: space-between;
