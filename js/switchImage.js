@@ -4,10 +4,10 @@ let isOriginalImage = true;
 
 imageSwitchButton.addEventListener('click', () => {
     if (isOriginalImage) {
-        image.src = 'images/intro_video.png';
+        image.src = 'images/intro_video_2.jpg';
     }
     else {
-        image.src = 'images/intro_video_2.jpg';
+        image.src = 'images/intro_video.png';
     }
 
     isOriginalImage = !isOriginalImage;
