@@ -5,18 +5,11 @@ link.addEventListener('click', function (event) {
     event.preventDefault();
     language = language === 'en' ? 'ru' : 'en';
 
-    if (language == 'en') {
-        link.innerHTML = 'RU';
-    }
-    else {
-        link.innerHTML = 'EN';
-    }
-
-    updateButton();
+    updateLanguageButton();
     translate();
 });
 
-function updateButton() {
+function updateLanguageButton() {
     if (language == 'en') {
         link.innerHTML = 'RU';
     }
@@ -50,6 +43,7 @@ const i18n = {
         'company-name-smaller': 'Design Studio',
         'company-address-1': 'Double Bay 2028,',
         'company-address-2': 'New York',
+        'theme-button': 'Switch Theme',
         'contact-us': 'Contact us',
         'company-name-huge': 'branding & digital design studio.',
         'intro-info-header': 'We\'re a creative digital studio',
@@ -105,6 +99,7 @@ const i18n = {
         'company-name-smaller': 'Дизайн-студия',
         'company-address-1': 'Дабл-Бей 2028,',
         'company-address-2': 'Нью-Йорк',
+        'theme-button': 'Сменить Тему',
         'contact-us': 'Свяжитесь с нами',
         'company-name-huge': 'студия брендинга и дизайна.',
         'intro-info-header': 'Мы творческая цифровая студия',
@@ -136,13 +131,13 @@ const i18n = {
         'fact-info-2': 'Проектов',
         'fact-info-3': 'Участников',
         'fact-info-4': 'Чашек кофе',
-        'contact-us': 'Свяжитесь с нами',
+        'contact-us': 'Связь с нами',
         'section-header-5': 'Из блога',
         'blog-type-1': 'Маркетинг',
-        'blog-header-1': 'Создание рабочего места, которое вдохновляет каждого из нас',
+        'blog-header-1': 'Создание вдохновляющего рабочего места',
         'read-more-1': 'Читать далее',
         'blog-type-2': 'Дизайн',
-        'blog-header-2': 'Дизайнеры, изменившие веб с помощью Webflow',
+        'blog-header-2': 'Дизайнеры, изменившие веб с Webflow',
         'footer-header': 'Свяжитесь с нами',
         'company-info': 'Görm - награжденное агентство по дизайну UI/UX и брендингу, базирующееся в Нью-Йорке, США.',
         'home': 'Главная',
@@ -157,5 +152,5 @@ const i18n = {
     }
 }
 
-updateButton();
+updateLanguageButton();
 translate();
