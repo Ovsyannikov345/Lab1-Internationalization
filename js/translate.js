@@ -5,10 +5,27 @@ link.addEventListener('click', function (event) {
     event.preventDefault();
     language = language === 'en' ? 'ru' : 'en';
 
-    getTranslate();
+    if (language == 'en') {
+        link.innerHTML = 'RU';
+    }
+    else {
+        link.innerHTML = 'EN';
+    }
+
+    updateButton();
+    translate();
 });
 
-function getTranslate() {
+function updateButton() {
+    if (language == 'en') {
+        link.innerHTML = 'RU';
+    }
+    else {
+        link.innerHTML = 'EN';
+    }
+}
+
+function translate() {
     localStorage.setItem('currentLanguage', language);
 
     const elements = document.querySelectorAll('[data-i18n]');
@@ -20,6 +37,11 @@ function getTranslate() {
             element.textContent = i18n[language][translationKey];
         }
     });
+
+    document.getElementById('name').placeholder = i18n[language]['name'];
+    document.getElementById('website').placeholder = i18n[language]['website'];
+    document.getElementById('details').placeholder = i18n[language]['details'];
+    document.getElementById('form-button').value = i18n[language]['form-button'];
 }
 
 const i18n = {
@@ -39,6 +61,9 @@ const i18n = {
         'our-work-header': 'Our work',
         'all-projects-button': 'all projects',
         'section-header-1': 'We build experiences',
+        'card-header-1': 'prototyping',
+        'card-header-2': 'web design',
+        'card-header-3': 'development',
         'card-description-1': 'Make sure you\'re building the right product.',
         'card-description-2': 'Attract and engage your customers with a website.',
         'card-description-3': 'Ensure your site performs up to your users’ standards.',
@@ -70,6 +95,10 @@ const i18n = {
         'guide': 'Style Guide',
         'licensing': 'Licensing',
         'instructions': 'Instructions',
+        'form-button': 'SEND PROPOSAL',
+        'name': 'Name',
+        'website': 'Website URL',
+        'details': 'Project Details',
     },
     'ru': {
         'company-name': 'Брендинг и',
@@ -77,16 +106,19 @@ const i18n = {
         'company-address-1': 'Дабл-Бей 2028,',
         'company-address-2': 'Нью-Йорк',
         'contact-us': 'Свяжитесь с нами',
-        'company-name-huge': 'студия брендинга и цифрового дизайна.',
+        'company-name-huge': 'студия брендинга и дизайна.',
         'intro-info-header': 'Мы творческая цифровая студия',
         'intro-info-text-1': 'Мы - команда дизайнеров и разработчиков, вдохновленная страстью и питаемая любопытством.',
         'intro-info-text-2': 'Мы верим, что человеческие взаимоотношения являются неотъемлемой частью успешного запуска любого проекта и именно здесь рождаются прекрасные эмоциональные связи между компанией и людьми.',
         'meet-team-button': 'познакомьтесь с командой',
         'collaborations': 'Команды и компании, с которыми мы работаем',
-        'view-work-button': 'посмотреть нашу работу',
+        'view-work-button': 'наши работы',
         'our-work-header': 'Наши работы',
         'all-projects-button': 'все проекты',
         'section-header-1': 'Мы создаем уникальные впечатления',
+        'card-header-1': 'Прототип',
+        'card-header-2': 'веб дизайн',
+        'card-header-3': 'разработка',
         'card-description-1': 'Убедитесь, что вы создаете правильный продукт.',
         'card-description-2': 'Привлекайте и вовлекайте ваших клиентов с помощью веб-сайта.',
         'card-description-3': 'Обеспечьте работу вашего сайта в соответствии с ожиданиями пользователей.',
@@ -101,8 +133,8 @@ const i18n = {
         'annotation': '* Компании, которым мы помогли создать их веб-сайт с помощью Görm',
         'fun-facts-header': 'Интересные факты',
         'fact-info-1': 'Лет на рынке',
-        'fact-info-2': 'Выполненных проектов',
-        'fact-info-3': 'Член команды',
+        'fact-info-2': 'Проектов',
+        'fact-info-3': 'Участников',
         'fact-info-4': 'Чашек кофе',
         'contact-us': 'Свяжитесь с нами',
         'section-header-5': 'Из блога',
@@ -115,8 +147,15 @@ const i18n = {
         'company-info': 'Görm - награжденное агентство по дизайну UI/UX и брендингу, базирующееся в Нью-Йорке, США.',
         'home': 'Главная',
         'about': 'О нас',
-        'guide': 'Руководство по стилю',
-        'licensing': 'Лицензирование',
+        'guide': 'Стили',
+        'licensing': 'Лицензия',
         'instructions': 'Инструкции',
+        'form-button': 'ОТПРАВИТЬ',
+        'name': 'Имя',
+        'website': 'URL Сайта',
+        'details': 'Детали проекта',
     }
 }
+
+updateButton();
+translate();

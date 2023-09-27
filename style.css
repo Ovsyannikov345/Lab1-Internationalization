@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     margin: auto;
     display: flex;
     justify-content: center;
+    gap: 290px;
     align-items: center;
 }
 
@@ -76,8 +77,6 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .burger-menu {
-    margin-left: 234px;
-    margin-right: 354px;
     width: 85px;
     height: 85px;
     flex-shrink: 0;
@@ -99,14 +98,15 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 
 .contact-us {
-    width: 204px;
+    min-width: 204px;
     display: flex;
     justify-content: space-between;
+    gap: 30px;
     align-items: center;
 }
 
 .translate-button {
-    width: 150px;
+    width: 60px;
     height: 43px;
     border-radius: 4px;
     background: #C6100F;
@@ -120,6 +120,11 @@ h1, h2, h3, h4, h5, h6, p, a {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.translate-button:hover {
+    background: #a50d0d;
+    cursor: pointer;
 }
 
 .shopping-cart {
@@ -306,7 +311,7 @@ h1 {
 }
 
 .intro-info-header {
-    max-width: 385px;
+    max-width: 530px;
     color: #FFF;
     font-size: 80px;
     line-height: 88px;
@@ -502,7 +507,7 @@ h1 {
 }
 
 .experiences-section .section-header {
-    max-width: 544px;
+    max-width: 570px;
 }
 
 .experiences-section {
@@ -1098,6 +1103,7 @@ footer {
     line-height: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    width: fit-content;
 }
 
 .links a:hover {
@@ -1106,28 +1112,8 @@ footer {
     text-decoration-color: #FFF;
 }
 
-#home {
-    width: 48px;
-}
-
-#about {
-    width: 60px;
-}
-
-#guide {
-    width: 109px;
-}
-
-#licensing {
-    width: 89px;
-}
-
-#instructions {
-    width: 127px;  
-}
-
 .contacts-container {
-    margin-left: 116px;
+    margin-left: 70px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
